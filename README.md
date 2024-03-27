@@ -1,28 +1,28 @@
 # Marketing Data ETL Project
 
-This project contains classes for Extract, Transform, and Load (ETL) processes for marketing data.
+Proyek ini berisi kelas-kelas untuk Proses Ekstrak, Transformasi, dan Muat (ETL) untuk data pemasaran.
 
 ## MarketingDataETL Class
 
-The `MarketingDataETL` class provides methods to extract, transform, and store marketing data from a CSV file.
+Kelas MarketingDataETL menyediakan metode untuk mengekstrak, mentransformasi, dan menyimpan data pemasaran dari file CSV.
 
 ### Methods
 
-1. `extract()`: Extracts data from a CSV file specified by the `file_path`.
-2. `transform()`: Cleans and transforms the extracted data.
-3. `store(output_file)`: Stores the transformed data into a CSV file specified by `output_file`.
+1. `extract()`: Mengekstrak data dari file CSV yang ditentukan oleh `file_path`.
+2. `transform()`: Membersihkan dan mentransformasi data yang diekstrak.
+3. `store(output_file)`: Menyimpan data yang telah ditransformasi ke dalam file CSV yang ditentukan oleh  `output_file`.
 
 ## TargetedMarketingETL Class
 
-The `TargetedMarketingETL` class inherits from `MarketingDataETL` and extends it with additional functionality for customer segmentation.
+Kelas `TargetedMarketingETL` mewarisi dari `MarketingDataETL` dan memperluas fungsionalitasnya dengan segmentasi pelanggan tambahan.
 
 ### Additional Method
 
-1. `segment_customers(criteria)`: Segments customers based on specified criteria such as total spent or product category.
-
+1. `segment_customers(criteria)`: Memsegmentasikan pelanggan berdasarkan kriteria yang ditentukan seperti total pengeluaran atau kategori produk.
+   
 ### Overridden Method
 
-The `transform()` method is overridden to include customer segmentation logic in addition to the standard data transformation process.
+Metode `transform()` dioverride untuk menyertakan logika segmentasi pelanggan selain proses transformasi data standar.
 
 ## Example Usage
 
