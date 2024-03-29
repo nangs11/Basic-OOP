@@ -1,40 +1,33 @@
-# Marketing Data ETL Project
+# Basic OOP Homework
 
-Proyek ini berisi kelas-kelas untuk Proses Ekstrak, Transformasi, dan Muat (ETL) untuk data pemasaran.
+## Deskripsi
+Repository ini dibuat sebagai bagian dari tugas Basic OOP oleh kami **Kelompok 17**. Tujuan dari tugas ini adalah untuk membuat class `MarketingDataETL` yang memiliki metode `extract()`, `transform()`, dan `store()`. Selain itu, kita juga diminta untuk membuat class turunan `TargetedMarketingETL` yang menambahkan metode `segment_customers()` dan melakukan overriding terhadap metode `transform()`.
 
-## MarketingDataETL Class
+## Files
+- `project_3.ipynb`: File Jupyter Notebook yang berisi implementasi tugas Basic OOP.
+- `marketing_data.csv`: Contoh file CSV yang digunakan untuk ekstraksi data.
+- `transformed_marketing_data.csv`: File CSV hasil transformasi yang disimpan.
 
-Kelas MarketingDataETL menyediakan metode untuk mengekstrak, mentransformasi, dan menyimpan data pemasaran dari file CSV.
+## Class dan Metode
+### `MarketingDataETL`
+- `extract()`: Membaca data dari file CSV.
+- `transform()`: Melakukan pembersihan dan transformasi sederhana pada data.
+- `store()`: Menyimpan data yang telah ditransformasi ke dalam struktur data DataFrame.
 
-### Methods
+### `TargetedMarketingETL`
+- `segment_customers(criteria)`: Mengelompokkan pelanggan berdasarkan kriteria tertentu.
+- `transform()`: Melakukan transformasi data serta menambahkan logika segmentasi pelanggan.
 
-1. `extract()`: Mengekstrak data dari file CSV yang ditentukan oleh `file_path`.
-2. `transform()`: Membersihkan dan mentransformasi data yang diekstrak.
-3. `store(output_file)`: Menyimpan data yang telah ditransformasi ke dalam file CSV yang ditentukan oleh  `output_file`.
-
-## TargetedMarketingETL Class
-
-Kelas `TargetedMarketingETL` mewarisi dari `MarketingDataETL` dan memperluas fungsionalitasnya dengan segmentasi pelanggan tambahan.
-
-### Additional Method
-
-1. `segment_customers(criteria)`: Memsegmentasikan pelanggan berdasarkan kriteria yang ditentukan seperti total pengeluaran atau kategori produk.
-   
-### Overridden Method
-
-Metode `transform()` dioverride untuk menyertakan logika segmentasi pelanggan selain proses transformasi data standar.
-
-## Example Usage
-
+## Cara Penggunaan
 ```python
 if __name__ == "__main__":
-    # Example usage of MarketingDataETL
+    # Contoh penggunaan untuk MarketingDataETL
     etl = MarketingDataETL("marketing_data.csv")
     etl.extract()
     etl.transform()
     etl.store("transformed_marketing_data.csv")
-
-    # Example usage of TargetedMarketingETL
+    
+    # Contoh penggunaan untuk TargetedMarketingETL
     targeted_etl = TargetedMarketingETL("marketing_data.csv")
     targeted_etl.extract()
     targeted_etl.transform()
